@@ -1,0 +1,18 @@
+.card {
+  border: 2px solid black;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.parent {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+button {
+  padding: 10px;
+  margin-bottom: 20px;
+}
