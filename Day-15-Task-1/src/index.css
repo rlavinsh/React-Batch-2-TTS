@@ -1,0 +1,13 @@
+.card {
+  border: 1px solid black;
+  width: 250px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.parent {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 10px;
+}
