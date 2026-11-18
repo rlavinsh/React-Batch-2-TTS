@@ -3,18 +3,24 @@ import { Routes, Route } from "react-router-dom";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Services from "./pages/Services";
+import Navbar from "./components/Navbar";
+import Products from "./pages/Products";
+import PageDetails from "./pages/PageDetails";
 const App = () => {
   return (
-    <div>
-      {/* <h1>App</h1> */}
-
-      <Routes>
-        <Route path="/" element={<h1>HomePage</h1>} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/services" element={<Services />} />
-      </Routes>
-    </div>
+    <>
+      <Navbar />
+      <div>
+        <Routes>
+          <Route path="/" element={<h1>HomePage</h1>} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/products/:id" element={<PageDetails />} />
+        </Routes>
+      </div>
+    </>
   );
 };
 
