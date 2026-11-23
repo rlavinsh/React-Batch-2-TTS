@@ -6,6 +6,9 @@ import Services from "./pages/Services";
 import Navbar from "./components/Navbar";
 import Products from "./pages/Products";
 import PageDetails from "./pages/PageDetails";
+import DashBoard from "./pages/DashBoard";
+import Course from "./pages/Course";
+import Profile from "./pages/Profile";
 const App = () => {
   return (
     <>
@@ -18,6 +21,10 @@ const App = () => {
           <Route path="/services" element={<Services />} />
           <Route path="/products" element={<Products />} />
           <Route path="/products/:id" element={<PageDetails />} />
+          <Route path="/dashboard" element={<DashBoard />}>
+            <Route path="course" element={<Course />} />
+            <Route path="profile" element={<Profile />} />
+          </Route>
         </Routes>
       </div>
     </>
