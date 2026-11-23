@@ -1,29 +1,32 @@
-function UserCard() {
+function UserCard({ user, onChangeUser }) {
+  const fullName = `${user.name.first} ${user.name.last}`;
+
   return (
     <div className="user-card">
-      <img className="user-image" src={""} alt={"Logo"} />
+      <img className="user-image" src={user.picture.large} alt={fullName} />
 
-      <h2>{"Lavinsh Rathor"}</h2>
+      <h2>{fullName}</h2>
 
       <div className="user-details">
         <p>
-          <strong>Gender:</strong> {"Male"}
+          <strong>Gender:</strong> {user.gender}
         </p>
 
         <p>
-          <strong>Email:</strong> {"lavinsh@gmail.com"}
+          <strong>Email:</strong> {user.email}
         </p>
 
         <p>
-          <strong>Phone:</strong> {123456789}
+          <strong>Phone:</strong> {user.phone}
         </p>
 
         <p>
-          <strong>Location:</strong> {"Gwalior"}, {"India"}
+          <strong>Location:</strong> {user.location.city},{" "}
+          {user.location.country}
         </p>
       </div>
 
-      <button>Change User</button>
+      <button onClick={onChangeUser}>Change User</button>
     </div>
   );
 }
