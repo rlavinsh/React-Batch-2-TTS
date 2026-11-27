@@ -1,4 +1,4 @@
-function Header() {
+function Header({ allNotes }) {
   return (
     <header className="header">
       <div>
@@ -7,7 +7,7 @@ function Header() {
       </div>
 
       <div className="notes-count">
-        <span className="count-number">3</span>
+        <span className="count-number">{allNotes.length}</span>
         <span>Total Notes</span>
       </div>
     </header>
